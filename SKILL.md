@@ -20,6 +20,7 @@ The user is about to close this session. Clean up after yourself and tell them w
 Look back over the whole session and list everything *you* created or started:
 - **Files:** screenshots, test and debug scripts, old copies of scripts, backups and snapshots (`*.bak`, `*_old`, `copy of ...`), debug output, scratchpad and `/tmp` files, browser profiles, logs, caches, build leftovers.
 - **Processes:** headless or test browsers, dev servers that were only for testing, watchers, tunnels, background jobs, `sleep`/poll loops.
+- **Containers and git state:** Docker containers, images and volumes, and git branches, worktrees and stashes you created. These often hold real work, so treat them as unsure unless you're certain they're throwaway.
 - **Changes:** files you created, modified or deleted outside the temp areas. `git status` / `git diff` in each project you worked in helps you get this right.
 
 If earlier parts of the session were summarized and you can't see exactly what you made, don't guess. Find candidates by modification time in the scratchpad, `/tmp` and the project folders you worked in, and put anything you can't attribute to this session on the unsure list.
@@ -28,7 +29,7 @@ If earlier parts of the session were summarized and you can't see exactly what y
 
 **Only touch what this session created or started.** Never delete anything that existed before the session, anything the user made, git history, or the real outputs of the work (the app, its data, config the user asked for, packages they wanted installed).
 
-The user's sessions often go beyond app code: OS and desktop setup, system config, installed packages, services and timers, networking (ports, firewall rules, VPNs, proxies, DNS, interfaces), drivers and shortcuts. In those areas something that looks temporary can be holding part of the system together, so **treat anything in those areas as unsure by default.** Treat anything else you can't clearly classify the same way.
+Sessions can go beyond app code: OS and desktop setup, system config, installed packages, services and timers, networking (ports, firewall rules, VPNs, proxies, DNS, interfaces), drivers and shortcuts. In those areas something that looks temporary can be holding part of the system together, so **treat anything in those areas as unsure by default.** Treat anything else you can't clearly classify the same way.
 
 For unsure items: don't delete them, don't stop them, and don't undo them (reverting a config change is as risky as deleting a file).
 
