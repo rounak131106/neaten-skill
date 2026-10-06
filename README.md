@@ -20,13 +20,23 @@ I wrote one version of this skill, then had several models (Claude Opus/Sonnet/F
 
 ## Install
 
-**Claude Code**
+It's one file: `SKILL.md`. Download it, edit it if you like, and drop it into your agent's skills folder.
+
+**1. Claude Code**
 ```bash
-git clone https://github.com/rounak131106/neaten ~/.claude/skills/neaten
+mkdir -p ~/.claude/skills/neaten
+curl -o ~/.claude/skills/neaten/SKILL.md https://raw.githubusercontent.com/rounak131106/neaten/main/SKILL.md
 ```
 
-**Antigravity CLI (agy)**: put the folder in `~/.gemini/config/skills/neaten` (a symlink to the Claude folder works). agy doesn't always load skills on its own, so also add a rule to `~/.gemini/GEMINI.md` telling it to read the skill first when you say "neaten up".
+**2. Antigravity CLI (agy)**
+```bash
+mkdir -p ~/.gemini/config/skills/neaten
+curl -o ~/.gemini/config/skills/neaten/SKILL.md https://raw.githubusercontent.com/rounak131106/neaten/main/SKILL.md
+```
+If agy doesn't pick it up when you say "neaten up", add a line to `~/.gemini/GEMINI.md` telling it to read that skill first.
 
-**Other agents**: point the agent at `SKILL.md`, or paste it into its instructions file.
+**3. Any other harness**
 
-Then say `neaten up` or `/neaten` when you're done for the session.
+Why stop at the official ones? A skill is just a text file. If your agent, wrapper or homemade harness has a skills folder, put `SKILL.md` in it. If it doesn't, paste the file into its system prompt or instructions file. Either way it works the same.
+
+Then say `neaten up` or `/neaten` at the end of a session.

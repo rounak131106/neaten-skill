@@ -47,6 +47,6 @@ Ask about every unsure item together, in the last part of the closing report, no
 Keep it plain and brief:
 1. **Cleaned up:** what you deleted (with space freed) and which processes you stopped.
 2. **Kept, and why:** what is left, including anything still running and how the user opens or uses it.
-3. **Saved to memory:** every memory or persistent note you wrote or updated this session (Claude Code: `~/.claude/projects/*/memory/`; agy: `~/.gemini/GEMINI.md` and `~/.gemini/antigravity-cli/knowledge/`), each with a one-line summary, or "nothing". Don't write new memories during cleanup. If something important from the session was clearly never saved, ask first.
+3. **Saved to memory:** every memory or persistent note you wrote or updated this session (Claude Code: `~/.claude/projects/*/memory/`; agy: `~/.gemini/GEMINI.md` and `~/.gemini/antigravity-cli/knowledge/`; other harnesses: wherever they keep memory), each with a one-line summary, or "nothing". Don't write new memories during cleanup. If something important from the session was clearly never saved, ask first.
 4. **Files changed this session:** every file you created, modified or deleted outside the temp areas, as a full path with a few words on what changed. Group them by project if there are many.
 5. **Unsure, keep or remove?:** the items you left alone, each with what it is and what removing it would do. Leave this part out if there are none.
