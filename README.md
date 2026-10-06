@@ -20,7 +20,7 @@ I wrote one version of this skill, then had several models (Claude Opus/Sonnet/F
 
 ## Install
 
-It's one file: `SKILL.md`. Download it, edit it if you like, and drop it into your agent's skills folder.
+It's one file: `SKILL.md`. Clone it, edit it if you like, and drop it into your agent's skills folder.
 
 **1. Claude Code**
 ```bash
