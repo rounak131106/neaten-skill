@@ -10,7 +10,7 @@ Say **"neaten up"** at the end of a session and the skill tells the agent to:
 
 1. List everything *it* created or started this session.
 2. Sort each item into sure or unsure. System config, packages, services, networking, drivers, shortcuts, containers and git branches count as unsure by default.
-3. Delete the sure items and stop the sure processes by exact PID. A loose `pkill -f` can kill the agent's own shell.
+3. Delete the sure items and stop the sure processes by exact PID or a precise match. A loose `pkill -f` can kill the agent's own shell.
 4. Keep the services you use running, and check that they still respond.
 5. End with a short report: what it cleaned, what it kept, what it saved to memory, which files changed, and one list of unsure items for you to decide on.
 
