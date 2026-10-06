@@ -23,19 +23,19 @@ I wrote one version of this skill, then had several models write their own versi
 It's one file: `SKILL.md`. Clone the repo, edit `SKILL.md` if you like, and copy it into your agent's skills folder.
 
 ```bash
-git clone https://github.com/rounak131106/neaten-skill
+git clone https://github.com/rounak131106/neaten-skill neaten
 ```
 
 **1. Claude Code**
 ```bash
 mkdir -p ~/.claude/skills/neaten
-cp neaten-skill/SKILL.md ~/.claude/skills/neaten/
+cp neaten/SKILL.md ~/.claude/skills/neaten/
 ```
 
 **2. Antigravity CLI (agy)**
 ```bash
 mkdir -p ~/.gemini/config/skills/neaten
-cp neaten-skill/SKILL.md ~/.gemini/config/skills/neaten/
+cp neaten/SKILL.md ~/.gemini/config/skills/neaten/
 ```
 agy doesn't always load skills on its own. If it ignores "neaten up", add this to `~/.gemini/GEMINI.md`:
 ```markdown
